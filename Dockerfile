@@ -1,6 +1,7 @@
 FROM python:3.7-alpine
 
-ENV PYTHONBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
 RUN apk update
     RUN apk add --virtual build-deps gcc python3-dev musl-dev 
